@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Quicksand:wght@300&display=swap');
+
+$headings: 'Fjalla One';
+$paragraphs: 'Quicksand';
+$principal-color: #7209b7;
+$second-color: #3a0ca3;
+$principal-link: #f72585;
+$second-link: #4cc9f0;
+$third-link: #4361ee;
+
+@mixin bold {
+    text-align: center;
+    font-weight: bold;
+}
+
+body {
+    margin: 0;
+}
+h1, h2 {
+    font-family: $headings;
+    font-size: 25px;
+    color: $principal-color;
+}
+h2 {
+    background-color: $second-link;
+    padding: 5px;
+}
+.contact {
+    ul {
+        line-height: 30px;
+        font-size: 15px;
+    }
+    div {
+        width: 100%;
+        img {
+            width: 100%;
+            height: 250px;
+            margin-top: 30px;
+            box-shadow: 5px 5px 15px $second-color, -5px -5px 15px $second-link;
+        }
+    }
+}
+picture {
+width: 100%;
+height: 150px;
+img {
+    width: 100%;
+    height: 150px;
+}
+}
+
+p, ul {
+    font-family: $paragraphs;
+    font-size: 20px;
+}
+.list {
+    background-color: $principal-link;
+    font-weight: bold;
+    line-height: 30px;
+    padding: 10px;
+    color: white;
+}
+.normas img {
+margin-left: 25%;
+margin-top: 40px;
+width: 150px;
+}
+
+.first, .second {
+    border: 2px solid $second-link;
+    margin-top: 30px;
+    border-radius: 20px;
+    height: 350px;
+    h4 {
+        background-color: $second-color;
+        padding: 10px;
+        color: $second-link;
+        font-family: $headings;
+        text-align: center;
+        font-size: 25px;
+    }
+    p {
+        padding: 5px;
+        font-size: 15px;
+        line-height: 10px;
+    }
+    
+.sub-title {
+    color: $principal-link;
+    @include bold();
+    font-size: 20px;
+}
+}
+
+i {
+    color: $principal-color;
+}
+
+footer {
+    background-color: $principal-link;
+    color: white;
+    font-family: $paragraphs;
+    font-size: 12px;
+    margin-top: 20px;
+    padding: 10px;
+    @include bold();
+}
+@media only screen and (min-width: 375px) {
+    h1 {
+        font-size: 30px;
+    }
+    picture {
+        height: 200px;
+        img {
+            height: 200px;
+        }
+    }
+.normas img {
+    margin-left: 30%;
+}
+footer {
+    font-size: 15px;
+}
+}
+@media only screen and (min-width: 425px) {
+    h1 {
+        text-align: center;
+    }
+    picture {
+        height: 250px;
+        img {
+            height: 250px;
+        }
+    }
+    .normas {
+        display: grid;
+        grid-template-columns: 200px 1fr;
+        p {
+            grid-column: 1/3;
+        }
+        section img {
+            margin: 10px;
+            height: 150px;
+            width: 200px;
+        }
+    }
+}
+@media only screen and (min-width: 768px) {
+    h1 {
+        font-size: 60px;
+        text-align: justify;
+    }
+    picture img {
+        height: 400px;
+    }
+    p {
+        font-size: 25px;
+    }
+    .normas {
+        grid-template-columns: 1fr 1fr;
+        section {
+            padding: 20px;
+            img {
+                width: 90%;
+                height: 180px;
+            }
+        }
+    }
+    .one img {
+       padding: 20px 0; 
+    }
+    .contact {
+    ul {
+        font-size: 20px;
+    }
+    div {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        section {
+            margin: 20px;
+        }
+    }
+}
+.contact div section:last-child {
+    grid-column: 1/3;
+    img {
+    height: 400px;
+}
+}
+.info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    .first, .second {
+        margin: 20px;
+    }
+}
+footer {
+    font-size: 20px;
+}
+}
+@media only screen and (min-width: 1024px) {
+    h1 {
+        font-size: 80px;
+    }
+    picture {
+        height: 500px;
+        img {
+            height: 500px;
+        }
+    }
+    p {
+        font-size: 30px;
+    }
+    .list ul {
+        font-size: 30px;
+        line-height: 50px;
+    }
+    .normas {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        p {
+            grid-column: 1/5;
+        }
+        section img {
+            margin: 0;
+        }
+    }
+    .contact {
+    h2 {
+        font-size: 40px;
+    }
+    ul {
+        font-size: 30px;
+        line-height: 50px;
+    }
+    div section img {
+        height: 400px;
+    }
+    div section:last-child img {
+        height: 600px;
+    }
+}
+.info {
+    .first, .second {
+        height: 450px;
+        p {
+            font-size: 25px;
+            padding-left: 20px;
+        }
+    }
+}
+footer {
+    font-size: 25px;
+}
+}
